@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset=utf-8>
+	<meta name=description content="">
+	<meta name=viewport content="width=device-width, initial-scale=1">
+	<title>demo</title>
+	<link rel="stylesheet" type="text/css" href="css/reset.css">
+	<style type="text/css">
+	body{background: #FDFFFF;}
+	/*顶端目录*/
+	.Nav{background:transparent;width:100%;height: 50px;}
+	.Nav .Logo{	width: 30px;
+				height: 30px;
+				background: transparent;
+				margin: 12px 30px 13px 30px;
+				float: left;}
+	.Nav li{padding-left: 70px;
+			float: left;
+			line-height: 50px;
+			text-align: center;}
+	.Nav li a{font-size: 20px;
+			font-family:Constantia;
+			display: block;}
+	/*顶部二级目录*/
+	.child-menu{z-index: 999;
+				width: 140px;
+				position: absolute;
+				background:#999;
+				display: none;
+				font-family:Constantia;}
+	.child-menu #child-1{float:none;
+					text-align:center;
+					line-height: 50px;
+					height:50px;
+					position:absolute;
+					top:0;left:-100px;}
+	.child-menu #child-2{position:absolute;
+					top:40px;left:-100px;}
+	.Nav li:hover .child-menu {display: block;background:#CECEFF;}
+	/*part1图片和文字部分*/
+	.part1{background-image:url(images/2.jpg);
+			width: 1349px;
+			height: 758px;
+			background-size: 100% auto;
+			}
+	.part1 .words{position: absolute;
+				left:800px;top: 200px;}
+	.part1 .words p{font-size: 4em;
+				font-family: Constantia;
+				color:white;}
+	/*part2中部图标和文字*/
+	/*.part2{width: 1300px;overflow: hidden;}
+	.part2 .icons{
+				height: 200px;
+				float: left;
+				padding-right: 311px;
+				}
+	.part2 .icons span {width: 100px;
+				height: 100px;
+				background:transparent;
+				display: inline-block;
+		        line-height: 130px;
+		        position: relative;
+		        top: 30px;left: 170px; }
+    .part2 .icons .mes{width: 100%;position:relative;top:60px;left: 170px;color:white;}*/
+
+	/*part3图片展示,遮罩层效果*/
+	
+.picwords p{width:100%;font-family:Constantia;font-size: 3em;text-align: center;padding: 30px 0 30px 0; }	
+.img_content {  
+    position: relative;  
+    background: #111;
+     float: left;  
+    margin-right:1px; 
+    width: 268px; 
+   height: 310px; 
+  margin-bottom: 30px;/*并非padding*/ 
+}  
+.img_contain {  
+    max-width: 100%;  
+    height: auto;  
+    overflow: hidden;  
+}  
+.pic_wrap {  
+    padding: 0;  
+    position: absolute;  
+    text-align: center;  
+    width:268px;  
+    top: 0;  
+    bottom: 0;  
+    display: table-cell;  
+    vertical-align: middle;  
+    overflow: hidden; 
+    height: 310px; 
+}  
+.pic_wrap p.pic_word {  
+    display: table;  
+    font-size: 110%;  
+    height: 100%;   
+    width: 100%;  
+    margin:0;  
+    font-size: 2em;
+    font-family: Constantia;
+}  
+.edit-link {  
+    z-index: 2;  
+}  
+.pic_wrap_word {  
+    display: table-cell;  
+    position: relative;  
+
+    transition: opacity 0.25s ease-in-out, background 0.25s ease-in-out;  
+    -moz-transition: opacity 0.25s ease-in-out, background 0.25s ease-in-out;  
+    -webkit-transition: opacity 0.25s ease-in-out, background 0.25s ease-in-out;  
+    
+    vertical-align: middle;  
+    z-index: 1;  
+    color: #fff;  
+    text-decoration: none;  
+    opacity: 0;  
+    padding: 10%;  
+}  
+.pic_wrap_word:hover {  
+    opacity: 0.9;  
+    color: #fff;  
+    background: rgba(0,0,0,0.8);  
+}  
+.img_contain img {  
+    display: block;  
+}  
+img {  
+    max-width: 100%;  
+    height: auto;  
+}  
+
+	/*part4表单部分*/
+label,button{font-family: Constantia;}
+.contact{width:800px;background:transparent;margin:0 auto;padding:10px;}
+.contact_form {position: relative;left: 130px;top:20px;}
+.contact_form ul {width:720px;list-style-type:none;}
+.contact_form li{padding:12px;;position:relative;} 
+.contact_form label {width:90px;margin-top: 3px;display:inline-block;float:left;padding:3px;font-size:14px;}
+.contact_form input {height:25px; width:200px; padding:6px;}
+.contact_form textarea {padding:8px; width:300px;}
+.contact_form button {margin-left:350px;}
+.contact_form input, .contact_form textarea { border:1px solid 	#8E8E8E;border-radius:4px;padding-right:30px;}
+	
+button.submit {
+	background-color:#50911e;
+	
+	border-radius: 3px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
+	
+	color:#F0F0F0;
+	padding: 6px 20px;
+	text-align: center;
+	
+}
+button.submit:hover {
+	opacity:0.9;
+	cursor: pointer; 
+}
+button.submit:active {
+	border: 1px solid #20911e;
+	}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<section class="Nav">
+			<span class="Logo"><img src="images/paper-plane.png" alt=""></span>
+			<ul class="Menu">
+			    <li><a href="">About Us</a></li>
+			    <li><a href="">Menu</a>
+			    
+			    <ul class="child-menu">
+			    <li id="child-1"><a href="">child-menu-1</a></li>
+			    <li id="child-2"><a href="">child-menu-2</a></li>
+			    </ul>
+
+			    </li>
+			    
+			</ul>	
+		</section>
+		<section class="part1">
+			<div class="words">
+				<p>&lt;p&gt;WELCOME.&lt;&#47;p&gt;</p>
+			</div>
+		</section>
+		<!--<section class="part2">
+			<div class="icons">
+				<span class="iconpic"><img src="images/emoji.png" alt=""></span>
+				
+				<div class="mes"><p>A meaningless icon</p></div>
+			</div>
+			<div class="icons">
+				<span class="iconpic"><img src="images/refresh.png" alt=""></span>
+				
+				<div class="mes"><p>A meaningless icon</p></div>
+			</div>
+			<div class="icons">
+				<span class="iconpic"><img src="images/display.png" alt=""></span>
+		
+				<div class="mes"><p>A meaningless icon</p></div>
+			</div>
+		</section>	-->
+		<section class="picShow">
+		<div class="picwords"><p>What do you want to know?</p></div>
+<div class="picBox">    
+  <div class="img_content">  
+    <div class="img_contain"><img src="images/art.jpg" alt=""></div>  
+    <div class="pic_wrap">  
+      <p class="pic_word"><a href="" class="pic_wrap_word">ART</a></p>  
+    </div>  
+  </div>   
+  <div class="img_content">  
+    <div class="img_contain"><img src="images/painting.jpg" alt=""></div>  
+    <div class="pic_wrap">  
+      <p class="pic_word"><a href="" class="pic_wrap_word">PAINTING</a></p>  
+    </div>  
+  </div>   
+  <div class="img_content">  
+    <div class="img_contain"><img src="images/fashion.jpg" alt=""></div>  
+    <div class="pic_wrap">  
+      <p class="pic_word"><a href="" class="pic_wrap_word">FASHION</a></p>  
+    </div>  
+  </div>   
+  <div class="img_content">  
+    <div class="img_contain"><img src="images/design.jpg" alt=""></div>  
+    <div class="pic_wrap">  
+      <p class="pic_word"><a href="" class="pic_wrap_word">DESIGN</a></p>  
+    </div>  
+  </div>    
+  <div class="img_content">  
+    <div class="img_contain"><img src="images/life.jpg" alt=""></div>  
+    <div class="pic_wrap">  
+      <p class="pic_word"><a href="" class="pic_wrap_word">LIFE</a></p>  
+    </div>  
+  </div>  
+</div>     
+</section>	
+		<section class="Table">
+		<div class="picwords"><p>Contact us?</p></div>
+		<div class="contact">
+<form class="contact_form" action="" method="post">
+    <ul>
+     
+        <li>
+            <label>Name:</label>
+            <input type="text"  placeholder="Chandler Bing" />
+        </li>
+        <li>
+            <label>E-mail:</label>
+            <input type="text" placeholder="Chandler@github.com" />  
+        </li>
+        <li>
+            <label>Message:</label>
+            <textarea name="message" cols="42" rows="7" placeholder=""></textarea>
+        </li>
+        <li>
+        	<button class="submit" type="submit">Submit</button>
+        </li>
+    </ul>
+</form>
+		</div>
+</section>
+</div>	
+</body> 
+</html>
